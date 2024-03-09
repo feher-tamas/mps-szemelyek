@@ -1,0 +1,19 @@
+<?xml version = "1.0"?>
+<DataMapping>  
+  <FileEncoding>Win_1250</FileEncoding>
+  <FormatList></FormatList>
+  <ParamDef></ParamDef>
+  <SourceDefList>    
+    <SourceDef name="Dolgozok">      
+      <EntityRef entity="PersonName" alias="személy" />
+      <OrderBy></OrderBy>
+    </SourceDef>
+  </SourceDefList>
+  <FilterDef></FilterDef>
+  <MappingDefList>    
+    <MappingDef name="Sor" sourceDef="Dolgozok">      
+      <GroupingItems></GroupingItems>
+    </MappingDef>
+  </MappingDefList>
+  <Renderings></Renderings>
+</DataMapping>

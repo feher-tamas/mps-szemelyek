@@ -1,0 +1,44 @@
+<?xml version = "1.0"?>
+<DataMapping>  
+  <FileEncoding>IBM_852</FileEncoding>
+  <FormatList>    
+    <FillChar value=" " />
+  </FormatList>
+  <ParamDef></ParamDef>
+  <SourceDefList>    
+    <SourceDef name="Dolgozok">      
+      <EntityRef entity="PersonName" alias="személy" />
+      <OrderBy></OrderBy>
+    </SourceDef>
+  </SourceDefList>
+  <FilterDef></FilterDef>
+  <MappingDefList>    
+    <MappingDef name="Sorok" sourceDef="Dolgozok">      
+      <GroupingItems></GroupingItems>
+      <ValueDef name="Azonosító">        
+        <AttributeRef sourceAlias="személy" attribute="PersonId" />
+        <FormatList></FormatList>
+      </ValueDef>
+      <ValueDef name="Családnév">        
+        <AttributeRef sourceAlias="személy" attribute="FamilyName" />
+        <FormatList></FormatList>
+      </ValueDef>
+      <ValueDef name="Keresztnév">        
+        <AttributeRef sourceAlias="személy" attribute="Forename" />
+        <FormatList></FormatList>
+      </ValueDef>
+    </MappingDef>
+  </MappingDefList>
+  <Renderings>    
+    <CSVRenderingDef>      
+      <Filename value="szemelyek.csv" />
+      <HeaderType value="name" />
+      <CustomHeader value="" />
+      <FieldSeparator value="semicolon" />
+      <QuoteCharacter value="no" />
+      <MappingDefs>        
+        <MappingDefRef name="Sorok" />
+      </MappingDefs>
+    </CSVRenderingDef>
+  </Renderings>
+</DataMapping>
